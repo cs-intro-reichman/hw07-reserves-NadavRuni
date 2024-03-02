@@ -38,6 +38,7 @@ public class HashTagTokenizer {
 
 		// Base case: do nothing (return) if hashtag is an empty string.
         boolean  a;
+		hashtag=hashtag.toLowerCase();
 		if (hashtag.isEmpty())
 		 {
             return;
