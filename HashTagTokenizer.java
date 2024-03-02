@@ -6,7 +6,9 @@ public class HashTagTokenizer {
 
 		String hashTag = args[0];
 		String []dictionary = readDictionary("dictionary.txt");
-		breakHashTag(hashTag, dictionary);
+		//breakHashTag(hashTag, dictionary);
+		hashTag=hashTag.toLowerCase();
+		System.out.println(hashTag);
 		//boolean a = existInDictionary(hashTag.substring(1, 2), dictionary);
 		//System.out.println(hashTag.substring(1, 2));
 		//System.out.println(a);
