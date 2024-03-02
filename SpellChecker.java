@@ -57,13 +57,27 @@ public class SpellChecker {
 		int rem=-1;
 		int minchange=threshold;
 		int chek;
+		int numchange=0;
 		for (int i=0;i<dictionary.length;i++)
 		{
 			chek=levenshtein(word, dictionary[i]);
 			if (chek<=minchange)
 			{
-				minchange=chek;
-				rem=i;
+				if (numchange==0)
+				{
+					numchange++;
+					minchange=chek;
+				    rem=i;
+
+				}
+				else if (chek<minchange)
+				{				
+						minchange=chek;
+				        rem=i;
+				}
+
+
+			
 			}
 		}
 		if (rem==-1)
