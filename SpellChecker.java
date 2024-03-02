@@ -60,7 +60,7 @@ public class SpellChecker {
 		for (int i=0;i<dictionary.length;i++)
 		{
 			chek=levenshtein(word, dictionary[i]);
-			if (chek<minchange)
+			if (chek<=minchange)
 			{
 				minchange=chek;
 				rem=i;
