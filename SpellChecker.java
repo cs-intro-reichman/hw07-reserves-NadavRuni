@@ -54,7 +54,7 @@ public class SpellChecker {
 	}
 
 	public static String spellChecker(String word, int threshold, String[] dictionary) {
-		int rem=0;
+		int rem=-1;
 		int minchange=threshold;
 		int chek;
 		for (int i=0;i<dictionary.length;i++)
@@ -66,11 +66,11 @@ public class SpellChecker {
 				rem=i;
 			}
 		}
-		if (minchange==threshold)
+		if (rem==-1)
 		{
-			return word;
+		return word;
 		}
-		return dictionary[rem];
+		 return dictionary[rem];
 	}
 
 }
